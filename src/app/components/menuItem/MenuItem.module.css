@@ -1,0 +1,21 @@
+.dottedTrail {
+  background-image: radial-gradient(
+    circle,
+    currentcolor 1px,
+    transparent 1.5px
+  );
+  background-position: bottom;
+  background-size: 1ex 4.5px;
+  background-repeat: space no-repeat;
+  flex-grow: 1;
+  height: 1em;
+  width: 100%;
+}
+
+.commaTrail span::after {
+  content: ", ";
+}
+
+.commaTrail span:last-child:after {
+  content: ".";
+}
