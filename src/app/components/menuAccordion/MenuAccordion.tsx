@@ -1,44 +1,56 @@
-"use client";
-
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import MenuItem from "../menuItem/MenuItem";
 import styles from "../shared/Shared.module.css";
-import { useState } from "react";
+import MenuAccordionContent from "./MenuAccordionContent";
 
 const MenuCategory = () => {
-  const [isCategoryExpanded, setIsCategoryExpanded] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <div>
-        <div className="flex flex-wrap items-baseline justify-start p-4">
-          <button
-            title="expand category"
-            className="flex gap-4 items-center justify-between text-xl md:text-2xl md:pointer-events-none"
-            onClick={() => {
-              setIsCategoryExpanded(!isCategoryExpanded);
-            }}>
-            <span className="font-bold">Main Courses </span>
-            <FontAwesomeIcon className="md:hidden block" icon={faCaretDown} />
-          </button>
-          <span className="block font-light">
-            A brief description of whatever is here A brief description of
-            whatever is here
-          </span>
-          <span className={`${styles.dottedTrail} w-full`}></span>
+      <motion.header
+        className="flex flex-wrap items-baseline justify-start md:justify-center text-left md:text-center p-4 cursor-pointer"
+        initial={false}
+        onClick={() => setIsOpen(!isOpen)}>
+        <div className="flex gap-4 items-center justify-between text-xl md:text-2xl md:pointer-events-none w-full md:w-auto">
+          <span className="font-oswald font-bold uppercase">Main Courses </span>
+          <FontAwesomeIcon
+            className={`transition-transform duration-300 md:hidden block ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+            icon={faCaretDown}
+          />
         </div>
-
-        {isCategoryExpanded && (
-          <div className="flex gap-1 flex-col">
-            <MenuItem />
-            <MenuItem />
-            <MenuItem />
-            <MenuItem />
-            <MenuItem />
-          </div>
+        <span className="block font-light">
+          A brief description of whatever is here A brief description of
+          whatever is here
+        </span>
+        <span className={`${styles.dottedTrail} w-full`}></span>
+      </motion.header>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{
+              type: "spring",
+              duration: 0.4,
+              bounce: 0,
+              ease: [0.04, 0.62, 0.23, 0.98],
+            }}
+            className="overflow-hidden">
+            <MenuAccordionContent />
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </>
   );
 };

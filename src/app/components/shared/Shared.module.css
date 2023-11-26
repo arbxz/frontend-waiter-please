@@ -18,3 +18,28 @@
 .commaTrail span:last-child:after {
   content: ".";
 }
+
+.highlightHover .highlightText::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #f4c624;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transition: width ease-in-out 0.3s;
+  z-index: -1;
+  -webkit-transition: width ease-in-out 0.3s;
+  -moz-transition: width ease-in-out 0.3s;
+  -ms-transition: width ease-in-out 0.3s;
+  -o-transition: width ease-in-out 0.3s;
+}
+
+.highlightHover:hover .highlightText::before {
+  width: 100%;
+}
