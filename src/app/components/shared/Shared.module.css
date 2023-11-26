@@ -9,7 +9,6 @@
   background-repeat: space no-repeat;
   flex-grow: 1;
   height: 1em;
-  width: 100%;
 }
 
 .commaTrail span::after {
