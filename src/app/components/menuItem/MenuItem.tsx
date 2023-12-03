@@ -14,7 +14,7 @@ const MenuItem = () => {
   const [hasWeightParam, setHasWeightParam] = useState(false);
   const [isItemUnavailable, setIsItemUnavailable] = useState(false);
   return (
-    <div className="w-full px-4 py-1">
+    <div className="w-full">
       <motion.header
         initial={false}
         animate={{ opacity: isOpen ? "0.7" : "1" }}
@@ -35,7 +35,7 @@ const MenuItem = () => {
         </div>
         <div className="flex flex-row items-center justify-between text-lg">
           <div className="flex flex-row items-center gap-2">
-            <span className="flex items-center justify-center p-1 h-6 w-6 text-sm bg-zinc-700 text-white rounded-full overflow-hidden">
+            <span className="flex items-center justify-center p-1 h-6 w-6 text-sm bg-emerald-800 text-white rounded-full overflow-hidden">
               <FontAwesomeIcon icon={faEnvira} />
             </span>
             <span>
@@ -49,6 +49,10 @@ const MenuItem = () => {
                 Unavailable
               </span>
             )}
+
+            <span className="px-4 py-1 font-bold rounded-3xl bg-newtag text-white uppercase">
+              New
+            </span>
 
             <span className="flex items-center gap-2 px-2 py-1 text-md rounded-3xl text-zinc-700 border-solid border-zinc-900 border hover:text-white hover:bg-zinc-700 duration-300 transition-colors">
               <FontAwesomeIcon icon={isOpen ? faEyeSlash : faEye} />

@@ -11,7 +11,7 @@ const MenuCategory = () => {
   return (
     <>
       <motion.header
-        className="flex flex-wrap items-baseline justify-start md:justify-center text-left md:text-center p-4 cursor-pointer"
+        className="flex flex-wrap items-baseline justify-start text-left md:text-left p-4 cursor-pointer"
         initial={false}
         onClick={() => setIsOpen(!isOpen)}>
         <div className="flex gap-4 items-center justify-between text-xl md:text-2xl md:pointer-events-none w-full md:w-auto">

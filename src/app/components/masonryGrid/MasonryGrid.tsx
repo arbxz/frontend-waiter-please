@@ -5,7 +5,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const MasonryGrid = () => {
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1280: 3 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1168: 3 }}>
       <Masonry>
         <MenuCategory />
         <MenuCategory />

@@ -24,7 +24,7 @@ const MenuItemContent = () => {
             <button
               title="add to favorites"
               name="add to favorites"
-              className="relative bg-zinc-700 text-white flex items-center gap-2 py-1 px-2 rounded-3xl text-xs"
+              className="relative bg-zinc-700 text-white flex items-center gap-2 py-1 px-2 rounded-3xl text-xs overflow-hidden"
               onClick={() => {
                 setIsLiked(!isLiked);
               }}>

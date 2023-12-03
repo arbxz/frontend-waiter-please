@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        foreground: "var(--foreground)",
+        background: "var(--background)",
+        favorite: "var(--favorite)",
+        newtag: "var(--new-tag)",
+        unavailable: "var(--unavailable)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

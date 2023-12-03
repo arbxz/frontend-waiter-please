@@ -10,8 +10,8 @@ const oswald = Oswald({
 
 const inter = Lato({
   subsets: ["latin"],
-  variable: "--font-inter",
   weight: "400",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
