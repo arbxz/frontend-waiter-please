@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Yantramanav, Lato } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Yantramanav({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-yantramanav",
+});
+
+const inter = Lato({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Waiter-please",
@@ -16,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${oswald.variable} font-inter`}>
+        {children}
+      </body>
     </html>
   );
 }

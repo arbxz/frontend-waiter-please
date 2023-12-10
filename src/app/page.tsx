@@ -1,11 +1,15 @@
-import Image from "next/image";
-
-import MenuItem from "./components/menuItem/MenuItem";
+import BottomNavigation from "./components/bottomNavigation/BottomNavigation";
+import MasonryGrid from "./components/masonryGrid/MasonryGrid";
+import NavigationMenu from "./components/navigationMenu/NavigationMenu";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center md:p-24 p-4 select-none">
-      <MenuItem />
+    <main className="select-none flex gap-4 md:gap-0 flex-col p-4 md:px-8">
+      <NavigationMenu />
+      <div className="w-full">
+        <MasonryGrid />
+      </div>
+      <BottomNavigation />
     </main>
   );
 }

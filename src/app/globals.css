@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #f3eed9;
-  --background-end-rgb: #f3eed9;
+  --primary: hsl(35, 84%, 60.78%);
+  --secondary: #a27e51;
+  --primaryText: #ffffff;
+  --secondaryText: #1e1e1c;
+  --label: hsl(0.5, 65.41%, 63.73%);
+  --foreground: hsl(51.43, 12.96%, 21.18%);
+  --background: #ffffff;
+  --favorite: rgb(220 38 38);
+  --new-tag: #306165;
+  --unavailable: grey;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground);
+  background: var(--background);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
