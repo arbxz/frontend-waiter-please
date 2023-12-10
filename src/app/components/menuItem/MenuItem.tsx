@@ -22,11 +22,13 @@ const MenuItem = () => {
         className={`cursor-pointer`}>
         <div className="flex flex-row items-end gap-4 text-lg font-regular mb-2">
           <div className="relative flex w-full items-end">
-            <span>Dish name name name poopee</span>
+            <span className="text-lg font-bold">
+              Dish name name name poopee
+            </span>
             <span className={`${styles.dottedTrail}`}></span>
           </div>
 
-          <span className="font-bold">
+          <span className="font-bold text-base">
             <span data-curr="RS" className="mr-1">
               Rs
             </span>
@@ -35,7 +37,7 @@ const MenuItem = () => {
         </div>
         <div className="flex flex-row items-center justify-between text-lg">
           <div className="flex flex-row items-center gap-2">
-            <span className="flex items-center justify-center p-1 h-6 w-6 text-sm bg-emerald-800 text-white rounded-full overflow-hidden">
+            <span className="flex items-center justify-center p-1 h-6 w-6 text-sm bg-foreground text-white rounded-full overflow-hidden">
               <FontAwesomeIcon icon={faEnvira} />
             </span>
             <span>
@@ -49,12 +51,10 @@ const MenuItem = () => {
                 Unavailable
               </span>
             )}
-
-            <span className="px-4 py-1 font-bold rounded-3xl bg-newtag text-white uppercase">
+            <span className="text-label font-bold text-base uppercase">
               New
             </span>
-
-            <span className="flex items-center gap-2 px-2 py-1 text-md rounded-3xl text-zinc-700 border-solid border-zinc-900 border hover:text-white hover:bg-zinc-700 duration-300 transition-colors">
+            <span className="flex items-center gap-2 px-2 py-1 text-md rounded-3xl text-zinc-700 border-solid border-zinc-900 hover:border-foreground border hover:text-background hover:bg-zinc-700 duration-300 transition-colors">
               <FontAwesomeIcon icon={isOpen ? faEyeSlash : faEye} />
               {isOpen ? "Less" : "More"}
             </span>

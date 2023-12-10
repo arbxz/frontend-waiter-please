@@ -9,10 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        primaryText: "var(--primaryText)",
+        secondaryText: "var(--secondaryText)",
         foreground: "var(--foreground)",
         background: "var(--background)",
         favorite: "var(--favorite)",
         newtag: "var(--new-tag)",
+        label: "var(--label)",
         unavailable: "var(--unavailable)",
       },
       backgroundImage: {
@@ -21,7 +26,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        oswald: "var(--font-oswald)",
+        yantramanav: "var(--font-yantramanav)",
         inter: "var(--font-inter)",
       },
     },

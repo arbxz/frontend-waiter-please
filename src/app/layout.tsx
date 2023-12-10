@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Oswald, Lato } from "next/font/google";
+import { Yantramanav, Lato } from "next/font/google";
 import "./globals.css";
 
-const oswald = Oswald({
+const oswald = Yantramanav({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-oswald",
+  variable: "--font-yantramanav",
 });
 
 const inter = Lato({

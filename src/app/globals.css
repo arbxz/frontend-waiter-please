@@ -3,19 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #1e1e1c;
+  --primary: hsl(35, 84%, 60.78%);
+  --secondary: #a27e51;
+  --primaryText: #ffffff;
+  --secondaryText: #1e1e1c;
+  --label: hsl(0.5, 65.41%, 63.73%);
+  --foreground: hsl(51.43, 12.96%, 21.18%);
   --background: #ffffff;
   --favorite: rgb(220 38 38);
   --new-tag: #306165;
   --unavailable: grey;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #f3f3f3;
-    --background: #222121;
-  }
-} */
 
 body {
   color: var(--foreground);
