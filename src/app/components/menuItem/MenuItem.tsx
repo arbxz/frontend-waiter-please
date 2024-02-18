@@ -22,9 +22,7 @@ const MenuItem = () => {
         className={`cursor-pointer`}>
         <div className="flex flex-row items-end gap-4 text-lg font-regular mb-2">
           <div className="relative flex w-full items-end">
-            <span className="text-lg font-bold">
-              Dish name name name poopee
-            </span>
+            <span className="text-lg font-bold">Dish name</span>
             <span className={`${styles.dottedTrail}`}></span>
           </div>
 

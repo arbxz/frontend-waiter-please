@@ -14,13 +14,13 @@ const MasonryGrid = () => {
     },
     {
       categoryName: "Main Course",
-      description: "Choose fomr our selection of grills",
+      description: "Choose from our selection of grills",
       imageURL: "/backgroundProps/meat.png",
       imagePlacement: imagePosition.UP,
     },
     {
       categoryName: "Meat menu",
-      description: "Choose fomr our selection of grills",
+      description: "Choose from our selection of grills",
       imageURL: "/backgroundProps/meat.png",
       imagePlacement: imagePosition.UP,
     },
@@ -28,7 +28,7 @@ const MasonryGrid = () => {
       categoryName: "Desserts",
       description: "Order a chill drink",
       imageURL: "/backgroundProps/icecream.png",
-      imagePlacement: imagePosition.DOWN,
+      imagePlacement: imagePosition.UP,
     },
     {
       categoryName: "Drinks",
